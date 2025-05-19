@@ -1,0 +1,10 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@typeRemboursement.add.headline">Add Type Remboursement</h1>
+    <div>
+        <a routerLink="/typeRemboursements" class="btn btn-secondary" i18n="@@typeRemboursement.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="libelle" i18n-label="@@typeRemboursement.libelle.label" label="Libelle" />
+    <input type="submit" i18n-value="@@typeRemboursement.add.headline" value="Add Type Remboursement" class="btn btn-primary mt-4" />
+</form>

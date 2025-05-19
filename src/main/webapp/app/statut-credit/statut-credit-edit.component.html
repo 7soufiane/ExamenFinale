@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@statutCredit.edit.headline">Edit Statut Credit</h1>
+    <div>
+        <a routerLink="/statutCredits" class="btn btn-secondary" i18n="@@statutCredit.edit.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="editForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="editForm" field="id" rowType="number" i18n-label="@@statutCredit.id.label" label="Id" />
+    <app-input-row [group]="editForm" field="libelle" i18n-label="@@statutCredit.libelle.label" label="Libelle" />
+    <input type="submit" i18n-value="@@statutCredit.edit.headline" value="Edit Statut Credit" class="btn btn-primary mt-4" />
+</form>
